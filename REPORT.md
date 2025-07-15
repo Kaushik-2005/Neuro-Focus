@@ -1,4 +1,4 @@
-****# NeuroFocus Project Report
+# NeuroFocus Project Report
 
 ## What is this project about?
 This project helps determine if a person is paying attention by looking at their brain signals (EEG) and eye state (open/closed). Think of it like a smart system that can tell if you're focused or distracted!
