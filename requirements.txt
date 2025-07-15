@@ -1,0 +1,15 @@
+numpy
+pandas
+torch
+torchvision
+scipy
+scikit-learn
+mne
+pyedflib
+streamlit
+plotly
+pytest
+black
+flake8
+jupyter
+tqdm

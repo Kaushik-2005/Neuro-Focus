@@ -1,0 +1,35 @@
+data:
+  dataset: "uci_eeg"  # Options: uci_eeg, seed, openbci
+  window_size: 5  # seconds
+  overlap: 0.5  # 50% overlap between windows
+  sampling_rate: 128  # Hz
+
+preprocessing:
+  filters:
+    alpha: [8, 13]  # Hz
+    beta: [13, 30]  # Hz
+    theta: [4, 8]   # Hz
+  normalize: true
+  feature_extraction:
+    time_domain:
+      - mean
+      - std
+      - rms
+    frequency_domain:
+      - psd
+      - beta_alpha_ratio
+
+model:
+  type: "cnn"  # Options: cnn, mlp, eegnet
+  input_size: 14  # Number of EEG channels
+  hidden_sizes: [64, 32]
+  dropout: 0.5
+  learning_rate: 0.001
+  batch_size: 32
+  num_epochs: 100
+  device: "cpu"  # Using CPU since CUDA is not available
+
+visualization:
+  update_interval: 1.0  # seconds
+  plot_window: 30  # seconds of data to display
+  threshold: 0.5  # Classification threshold 

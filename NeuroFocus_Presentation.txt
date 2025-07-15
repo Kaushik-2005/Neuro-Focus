@@ -1,0 +1,64 @@
+Slide 1: Project Overview
+- NeuroFocus: Real-Time Attention Detection using EEG Signals
+- Integrates EEG brainwave data and eye state for comprehensive analysis
+- Detects attention levels continuously and objectively
+- Designed for real-time feedback and monitoring
+- Applications: education, driver alertness, brain-computer interfaces, research
+- Modular and extensible system architecture
+
+Slide 2: Motivation & Problem Statement
+- Attention is crucial for learning, safety, and productivity
+- Traditional methods (observation, self-report) are subjective and slow
+- EEG provides direct, physiological measurement of brain activity
+- Need for automated, real-time attention assessment tools
+- Goal: Deliver fast, objective, and actionable attention feedback
+- Enable new applications in adaptive learning and safety systems
+
+Slide 3: Data & Signal Processing
+- Uses EEG signals (brainwaves) and eye state data as inputs
+- Focus on Beta (attention), Alpha (relaxation), Theta (drowsiness) waves
+- Preprocessing: bandpass filtering, artifact removal, normalization
+- Feature extraction: power spectral density, statistical features
+- Supports multiple data formats: CSV, EDF, BDF, MATLAB, OpenBCI
+- Handles noisy and real-world EEG data robustly
+
+Slide 4: Attention Calculation
+- Attention score = Beta/Alpha power ratio (higher = more focused)
+- Eye state (open/closed) used to refine and validate attention estimate
+- Combines time-domain and frequency-domain features
+- Detects and mitigates artifacts (e.g., blinks, muscle noise)
+- Real-time calculation for immediate feedback
+- Adaptable thresholds for different users and contexts
+
+Slide 5: Model Architectures
+- Three neural networks: EEGNet, SimpleCNN, EEGMLP
+- EEGNet: advanced, compact CNN designed for EEG signals
+- SimpleCNN: fast, lightweight, suitable for edge devices
+- EEGMLP: basic multilayer perceptron, good for baseline comparison
+- All models support binary (focused/distracted) and multi-class outputs
+- Modular design allows easy model swapping and experimentation
+- Trained and evaluated on both real and synthetic EEG data
+
+Slide 6: System Pipeline
+- Data loading from various sources and formats
+- Preprocessing: filtering, segmentation, feature extraction
+- Model inference: predicts attention state from features
+- Real-time visualization: attention trends, brainwave activity
+- Feedback loop for user or system adaptation
+- Extensible for integration with external applications (e.g., alerts)
+
+Slide 7: Results & Impact
+- Accurate, real-time attention detection demonstrated in tests
+- Robust to noise, artifacts, and varying data quality
+- Enables adaptive learning, driver monitoring, and BCI demos
+- User-friendly interface for visualization and feedback
+- Open-source and customizable for research and development
+- Potential to improve safety, engagement, and productivity
+
+Slide 8: Future Work
+- Add more data sources (wearables, mobile EEG, eye trackers)
+- Enhance visualization (topographic brain maps, long-term trends)
+- Improve model accuracy and generalization
+- Deploy as a cross-platform, user-friendly application
+- Integrate with external systems (education, automotive, healthcare)
+- Conduct large-scale user studies and real-world validation 
